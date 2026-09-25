@@ -1,11 +1,11 @@
 import Footer from "../Footer";
-import style from "./UserCard.module.css";
+import styles from "./UserCard.module.css";
 
 function UserCard(props) {
   const { name, surname, nickname, sex, isVerified, stats } = props.userInfo;
 
   return (
-    <article className="userCard">
+    <article className={styles.userCard}>
       <h1>{`${name} ${surname}`}</h1>
       <span>{nickname}</span>
       <span>{sex}</span>
