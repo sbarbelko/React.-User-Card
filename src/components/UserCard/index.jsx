@@ -5,11 +5,13 @@ function UserCard(props) {
   const { name, surname, nickname, sex, isVerified, stats } = props.userInfo;
   const { tweets, followers, following } = stats;
 
+  const nameColor = sex === "female" ? "#4A3E3D" : "#E11D48";
+
   return (
     <article className={styles.userCard}>
       <header>
         <img src={profile} alt={name} />
-        <h1>{`${name} ${surname}`}</h1>
+        <h1 style={{ color: nameColor }}>{`${name} ${surname}`}</h1>
         <span>{nickname}</span>
       </header>
       <footer>
