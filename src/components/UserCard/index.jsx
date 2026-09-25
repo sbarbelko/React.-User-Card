@@ -13,6 +13,7 @@ function UserCard(props) {
         <img src={profile} alt={name} />
         <h1 style={{ color: nameColor }}>{`${name} ${surname}`}</h1>
         <span>{nickname}</span>
+        {isVerified && <span className={styles.verif}>Verified</span>}
       </header>
       <footer>
         <h2>
